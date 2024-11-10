@@ -11,7 +11,7 @@ const Categoress = ({categores}) => {
                     to={`category/${category.category}`}
                     className={({ isActive }) =>
                         `shrink-0 rounded-lg p-2 text-sm font-medium ${
-                            isActive ? "bg-sky-100 text-sky-600" : "hover:bg-sky-100 hover:text-sky-600"
+                            isActive ? "bg-yellow-500  text-black" : "hover:bg-yellow-500 hover:text-sky-600"
                         }`
                     }
                     aria-current="page"

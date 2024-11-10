@@ -8,6 +8,7 @@ import Home from "../Pages/Home";
 import Coffees from "../Pages/Coffees";
 import Dashborad from "../Pages/Dashborad";
 import CoffeeCards from "../components/CoffeeCards";
+import Coffedetails from "../Pages/Coffedetails";
 
 
 
@@ -39,10 +40,17 @@ import CoffeeCards from "../components/CoffeeCards";
         {
           path: "/Coffees",
           element: <Coffees></Coffees>,
+          loader:()=>fetch('/coffees.json')
         },
         {
           path: "/Dashborad",
           element: <Dashborad></Dashborad>,
+        },
+        {
+          path: "/card/:id",
+          element: <Coffedetails></Coffedetails>,
+          loader:()=>fetch('/coffees.json')
+
         },
 
        
