@@ -45,6 +45,7 @@ import Coffedetails from "../Pages/Coffedetails";
         {
           path: "/Dashborad",
           element: <Dashborad></Dashborad>,
+          loader:()=>fetch('/coffees.json')
         },
         {
           path: "/card/:id",

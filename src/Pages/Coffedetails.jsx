@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addfavorite } from '../components/Utilites';
+
 
 const Coffedetails = () => {
     const {id}=useParams();
@@ -23,6 +25,11 @@ const Coffedetails = () => {
         popularity,
       } = coffe
 
+      const handleFavorite = coffe => {
+        addfavorite(coffe)
+        
+      }
+
     return (
         <div>
              {/* Description */}
@@ -40,7 +47,8 @@ const Coffedetails = () => {
         </div>
         <div>
           <button
-            
+                        onClick={() => handleFavorite(coffe)}
+
             className='btn btn-warning'
           >
             Add Favorite
